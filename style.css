@@ -5,10 +5,9 @@ html, body {
     color: blanchedalmond;
 }
 
-
-.main-container {
+.main-container{
     display: grid;
-    grid-template-rows: minmax(100px, 20vh) 80vh;
+    grid-template-rows: minmax(100px, 15vh) 85vh;
     grid-template-columns: 1fr 4fr;
     height: 100vh;
 }
@@ -40,32 +39,136 @@ html, body {
     background-color: rgb(77, 48, 14);
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 33% 67%;
     grid-template-rows: 1fr 2fr;
     padding: 5px;
+
 }
-.header-sub-container{
+.header-sub-container {
     display: grid;
     background-color: rgb(104, 90, 73);
     grid-template-columns: 1fr 5fr 1fr 1fr 3fr;
     padding: 10px;
+    align-items: center;
+    gap: 20px;
 }
-.header-sub-container:nth-child(2){
-    display: grid;
+.header-sub-container:nth-child(2) {
     background-color: rgb(199, 169, 131);
-    grid-template-columns: 1fr 5fr 1fr 1fr 3fr;
-    padding: 10px;
+    grid-template-columns: 2fr 4fr 1fr 1fr 1fr;
 }
 .header-sub-container p{
-    font-size: 1rem;
+    font-size: 0.6rem;
+    line-height: 0.2rem;
+    margin: 0;
+    padding: 0;
 }
 .header-sub-container h2{
-    font-size: 1.2rem;
+    font-size: 1.0rem;
+    line-height: 1rem;
+    margin: 0;
+    padding: 0;
 }
 .header-sub-container h3{
     font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .content-container{
     grid-area: 2/2/span 1/ span 1;
     background-color: red;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 9fr 1fr 9fr;
+    align-items: center;
+}
+
+.projects-container {
+    grid-row: 2/-1;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: rgb(30, 78, 28);
+}
+.project-card h3{
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 5px;
+    margin-top: 20px;
+}
+.project-card p{
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 5px;
+}
+.project-icons{
+    padding: 0;
+    margin: 5px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    gap: 10px;
+    direction: rtl;
+}
+.project-icons img{
+    background-color: bisque;
+    max-width: 25px;
+    max-height: 25px;
+    width: 25px;
+    height: 25px;
+}
+
+.announcements-container{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: repeat(3,max(100px, 1fr));
+    grid-template-rows: repeat(3,100px);
+    padding: 0;
+    margin: 0;
+    align-items:center;
+    gap: 0px;
+}
+.announcement-card {
+    padding: 0px;
+    margin: 0px;
+    border-bottom: gray 1px solid;
+    /* height: 100px; */
+}
+.announcement-card h3 {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0px;
+    line-height: 0.6rem;
+}
+.announcement-card p {
+    font-size: 0.8rem;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin:2px;
+    margin-bottom: 10px;
+}
+
+#projects,#announcements,#trending {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.trending-container h1 {
+    font-size: 1rem;
+}
+.trending-container p {
+    font-size: 0.8rem;
+    margin:2px;
 }
